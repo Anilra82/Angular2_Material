@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { PageOneComponent } from './page-one/page-one.component';
 import { PageTwoComponent } from './page-two/page-two.component';
 import { SettingComponent } from './setting/setting.component';
+import {MaterialModule} from "@angular/material";
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SettingComponent } from './setting/setting.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]
