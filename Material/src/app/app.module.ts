@@ -10,6 +10,7 @@ import { PageTwoComponent } from './page-two/page-two.component';
 import { SettingComponent } from './setting/setting.component';
 import {MaterialModule} from "@angular/material";
 import 'hammerjs';
+import {DataService} from "./data.service";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import 'hammerjs';
     MaterialModule.forRoot()
 
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,12 @@
-<p>
-  page-one works!
-</p>
+<md-card *ngFor="let item of items; let i = index">
+  <md-card-content><p>{{item.id}}</p><p>{{item.name}}</p></md-card-content>
+  <md-card-actions>
+    <button md-button (click)="likeMe(i)">
+      <i class="material-icons md-18" [class.red-color]="item.liked == '1'">favorite</i> LIKE
+    </button>
+    <button md-button (click)="deleteMe(i)">
+      <i class="material-icons md-18">delete</i> DELETE
+    </button>
+  </md-card-actions>
+</md-card>
+

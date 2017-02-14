@@ -1,3 +1,21 @@
 <md-toolbar color="primary">
   <span>Angular Material</span>
+  <span class="spacer"></span>
+  <button md-icon-button [mdMenuTriggerFor]="menu"><md-icon>more_vert</md-icon></button>
+  <md-menu #menu="mdMenu">
+    <button md-menu-item><md-icon>home</md-icon><span>Home</span></button>
+    <button md-menu-item><md-icon>fingerprint</md-icon><span>Login</span></button>
+    <button md-menu-item><md-icon>announcement</md-icon><span>Issues</span></button>
+    <button md-menu-item><md-icon>notifications_off</md-icon><span>Disable alerts</span></button>
+  </md-menu>
 </md-toolbar>
+
+
+
+
+<md-tab-group>
+  <md-tab label="Page 1"><app-page-one></app-page-one></md-tab>
+  <md-tab label="Page 2"><app-page-two></app-page-two></md-tab>
+  <md-tab label="Login"><app-login></app-login></md-tab>
+  <md-tab label="Settings"><app-setting></app-setting></md-tab>
+</md-tab-group>
